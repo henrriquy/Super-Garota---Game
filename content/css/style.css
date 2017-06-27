@@ -1,0 +1,147 @@
+body,body > *{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.cena{
+    width:1024px;
+    height: 512px;
+    border: 0px solid #000;
+    overflow:hidden;
+}
+
+
+/*Animação do plano de fundo*/
+.bg {
+    position: absolute;
+    width: 1024px;
+    height: 512px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bg:before, .bg:after {
+    content: "";
+    position: absolute;
+    width: 1024px;
+    height: 512px;
+    background-image: url(../img/bg.jpg);
+    background-size: 100%;
+    animation: moveBg 3s infinite linear;
+}
+
+.bg:before {
+    right: 1024px;
+}
+
+@keyframes moveBg {
+    from {transform: translateX(1024px);}
+      to {transform: translateX(0px);}
+}
+
+/*Animação do player */
+.player{
+    position:absolute;
+    width: 189px;
+    height: 138px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/*Animação Super Garota voando */
+.playerVoando:before, .playerVoando:after {
+    content: "";
+    position: absolute;
+    width: 189px;
+    height: 138px;
+    background-image: url(../img/superGarotaVoando/0.png);
+    background-position: center;
+    background-size: 100%;
+    animation: movePlayerVoando 0.6s infinite ease;
+}
+@keyframes movePlayerVoando {
+    0%  {background-image: url(../img/superGarotaVoando/0.png);background-position: center;}
+    20% {background-image: url(../img/superGarotaVoando/1.png);background-position: center;}
+    40% {background-image: url(../img/superGarotaVoando/2.png);background-position: center;}
+    60% {background-image: url(../img/superGarotaVoando/3.png);background-position: center;}
+    80% {background-image: url(../img/superGarotaVoando/4.png);background-position: center;}
+    100% {background-image: url(../img/superGarotaVoando/5.png);background-position: center;}     
+}
+/*Animação Super Gorota atirando*/
+.playerAtirando:before, .playerAtirando:after {
+    content: "";
+    position: absolute;
+    width: 189px;
+    height: 138px;
+    background-image: url(../img/superGarotaAtirando/0.png);
+    background-position: center;
+    background-size: 100%;
+    animation: movePlayerAtirando 0.4s infinite ease;
+    margin-left: 13px;
+    margin-top: -2px;
+}
+@keyframes movePlayerAtirando {
+    0%  {background-image: url(../img/superGarotaAtirando/0.png);background-position: center;}
+    33% {background-image: url(../img/superGarotaAtirando/1.png);background-position: center;}
+    66% {background-image: url(../img/superGarotaAtirando/2.png);background-position: center;}
+    100% {background-image: url(../img/superGarotaAtirando/3.png);background-position: center;}    
+}
+
+/*Animação Super Gorota morrendo*/
+.playerMorrendo:before, .playerMorrendo:after {
+    content: "";
+    position: absolute;
+    width: 189px;
+    height: 138px;
+    background-image: url(../img/superGarotaMorrendo/0.png);
+    background-position: center;
+    background-size: 100%;
+    animation: movePlayerMorrendo 0.4s infinite ease;
+}
+@keyframes movePlayerMorrendo {
+    0%  {background-image: url(../img/superGarotaMorrendo/0.png);background-position: center;}
+    16% {background-image: url(../img/superGarotaMorrendo/1.png);background-position: center;}
+    32% {background-image: url(../img/superGarotaMorrendo/2.png);background-position: center;}
+    48% {background-image: url(../img/superGarotaMorrendo/3.png);background-position: center;}    
+    64% {background-image: url(../img/superGarotaMorrendo/4.png);background-position: center;}    
+    80% {background-image: url(../img/superGarotaMorrendo/5.png);background-position: center;}    
+    100% {background-image: url(../img/superGarotaMorrendo/6.png);background-position: center;}    
+}
+
+/*Tiro*/
+.tiro{
+    background-image: url(../img/superGarotaAtirando/tiro.png);
+    background-position: center;
+    width: 50px;
+    height: 20px;
+    background-size: 50px 20px;
+    position:absolute;
+    z-index: 1;
+}
+
+/* 
+Moedas
+*/
+.grupoMoedas{
+    height: 30px;
+    width: 400px;    
+    position: absolute;
+    z-index: 1;
+    left: 1300px;
+}
+.moeda{
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/moeda/0.png);
+    margin-left: 5px;
+    margin-right: 5px;
+    animation: animaMoeda 0.6s infinite ease;
+    display: inline-block;
+}
+
+@keyframes animaMoeda {
+    0%  {background-image: url(../img/moeda/0.png);background-position: center;}
+    33% {background-image: url(../img/moeda/1.png);background-position: center;}
+    66% {background-image: url(../img/moeda/2.png);background-position: center;}
+    100% {background-image: url(../img/moeda/3.png);background-position: center;}    
+}
