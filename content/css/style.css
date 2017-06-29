@@ -86,40 +86,76 @@ body,body > *{
 }
 
 
-.player.atirando{
-    -webkit-animation: atirando 0.4s steps(4) infinite;
-       -moz-animation: atirando 0.4s steps(4) infinite;
-        -ms-animation: atirando 0.4s steps(4) infinite;
-         -o-animation: atirando 0.4s steps(4) infinite;
-            animation: atirando 0.4s steps(4) infinite;
+.player.atingido{
+    animation: playerAtingido;
+    animation-duration: 1s;
+   
 }
 
-@-webkit-keyframes atirando {
-   from { background-position: -1134px; }
-     to { background-position: -1890px; }
+@-webkit-keyframes playerAtingido {
+   0% { opacity:  0.0; }
+   20% { opacity: 1.0; }
+   40% { opacity: 0.0; }
+   60% { opacity: 1.0; }
+   80% { opacity: 0.0; }
+   100%{ opacity: 1.0; }
 }
 
-@-moz-keyframes atirando {
-   from { background-position: -1134px; }
-     to { background-position: -1890px; }
+@-moz-keyframes playerAtingido {
+   0% { opacity:  0.0; }
+   20% { opacity: 1.0; }
+   40% { opacity: 0.0; }
+   60% { opacity: 1.0; }
+   80% { opacity: 0.0; }
+   100%{ opacity: 1.0; }
 }
 
-@-ms-keyframes atirando {
-   from { background-position: -1134px; }
-     to { background-position: -1890px; }
+@-ms-keyframes playerAtingido {
+   0% { opacity:  0.0; }
+   20% { opacity: 1.0; }
+   40% { opacity: 0.0; }
+   60% { opacity: 1.0; }
+   80% { opacity: 0.0; }
+   100%{ opacity: 1.0; }
 }
 
-@-o-keyframes atirando {
-   from { background-position: -1134px; }
-     to { background-position: -1890px; }
+@-o-keyframes playerAtingido {
+    0% { opacity:  0.0; }
+   20% { opacity: 1.0; }
+   40% { opacity: 0.0; }
+   60% { opacity: 1.0; }
+   80% { opacity: 0.0; }
+   100%{ opacity: 1.0; }
 }
 
-@keyframes atirando {
-   from { background-position: -1134px; }
-     to { background-position: -1890px; }
+@keyframes playerAtingido {
+   0% { opacity:  0.0; }
+   20% { opacity: 1.0; }
+   40% { opacity: 0.0; }
+   60% { opacity: 1.0; }
+   80% { opacity: 0.0; }
+   100%{ opacity: 1.0; }
 }
 
-.player.morrendo{
+
+
+.obstaculo1{
+    width: 42px;
+    height: 38px;
+    position: absolute;
+    background-image: url(../img/obstaculo1.png);
+    background-repeat: no-repeat;
+}
+
+.obstaculo2{
+    width: 104px;
+    height: 95px;
+    position: absolute;
+    background-image: url(../img/obstaculo2.png);
+    background-repeat: no-repeat;
+}
+
+.player.morto{
     -webkit-animation: morrendo 0.7s steps(7) infinite;
        -moz-animation: morrendo 0.7s steps(7) infinite;
         -ms-animation: morrendo 0.7s steps(7) infinite;
@@ -160,7 +196,7 @@ body,body > *{
     height: 20px;
     background-size: 50px 20px;
     position:absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* 
@@ -177,7 +213,6 @@ Moedas
     width: 38px;
     height: 30px;
     background-image: url(../img/moeda.png);
-    animation: animaMoeda 0.6s infinite ease;
     position: absolute;
     z-index: 1;
     left: 1300px;
@@ -212,7 +247,99 @@ Moedas
    from { background-position: 0px; }
      to { background-position: -190px; }
 }
+.alien1{
+    width: 150px;
+    height: 110px;
+    background-image: url(../img/alien.png);
+    background-repeat: no-repeat;
+    background-size: 2122px 154px;
+    position: absolute;
+    z-index: 1;
+    -webkit-animation: alien 1s steps(7) infinite;
+       -moz-animation: alien 1s steps(7) infinite;
+        -ms-animation: alien 1s steps(7) infinite;
+         -o-animation: alien 1s steps(7) infinite;
+            animation: alien 1s steps(7) infinite;
+    
+}
 
+@-webkit-keyframes alien {
+   from { background-position: 0px; }
+     to { background-position: -1150px; }
+}
+
+@-moz-keyframes alien {
+   from { background-position: 0px; }
+     to { background-position: -1150px; }
+}
+
+@-ms-keyframes alien {
+   from { background-position: 0px; }
+     to { background-position: -1150px; }
+}
+
+@-o-keyframes alien {
+   from { background-position: 0px; }
+     to { background-position: -1150px; }
+}
+
+@keyframes alien {
+   from { background-position: 0px; }
+     to { background-position: -1150px; }
+}
+
+.alien1Atingido{
+    width: 150px;
+    height: 110px;
+    background-image: url(../img/alien.png);
+    background-repeat: no-repeat;
+    background-size: 2122px 154px;
+    position: absolute;
+    z-index: 1;
+    top:200px;
+    left: 200px;
+    -webkit-animation: alien1Atingido 1s steps(6) infinite;
+       -moz-animation: alien1Atingido 1s steps(6) infinite;
+        -ms-animation: alien1Atingido 1s steps(6) infinite;
+         -o-animation: alien1Atingido 1s steps(6) infinite;
+            animation: alien1Atingido 1s steps(6) infinite;
+    
+}
+
+@-webkit-keyframes alien1Atingido {
+   from { background-position: -1150px; }
+     to { background-position: -2170px; }
+}
+
+@-moz-keyframes alien1Atingido {
+   from { background-position: -1150px; }
+     to { background-position: -2170px; }
+}
+
+@-ms-keyframes alien1Atingido {
+   from { background-position: -1150px; }
+     to { background-position: -2170px; }
+}
+
+@-o-keyframes alien1Atingido {
+   from { background-position: -1150px; }
+     to { background-position: -2170px; }
+}
+
+@keyframes alien1Atingido {
+   from { background-position: -1150px; }
+     to { background-position: -2170px; }
+}
+
+
+
+
+.font{
+     font-family: AR DESTINE;
+    text-transform: bold;
+    color: #fff; 
+    font-size: 22px;
+}
 .vidas{
     width: 500px;
     height: 30px;
@@ -223,10 +350,17 @@ Moedas
 }
 
 .qtdMoedas{
-    width: 500px;
+    width: 50px;
     height: 30px;
     position: absolute;
     z-index: 1;
     left: 10px;
     top:25px;
+    background-image: url(../img/moeda.png);
+    background-position: -105px 3px;
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    padding-left: 25px;
+    margin-top: 10px;
+    margin-left: -5px;
 }
