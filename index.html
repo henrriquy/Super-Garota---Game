@@ -12,12 +12,18 @@
     <audio id="somTiro">
         <source src="content/audios/hadoukenSakura.mp3" type="audio/mpeg" />
     </audio>
+    <audio id="somMoeda">
+        <source src="content/audios/moeda.mp3" type="audio/mpeg" />
+    </audio>
     <audio volume=0.0 autoplay loop id="musica">
         <source src="content/audios/missionImpossivel.mp3"  type="audio/mpeg" />
     </audio>
     <div class="cena">
+        <div class="vidas"></div>
+        <div class="qtdMoedas"></div>
         <div class="bg"></div>
-        <div id="player1" class="player playerVoando"></div>
+        <div id="player1" class="player voando">
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

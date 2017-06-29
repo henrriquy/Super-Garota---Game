@@ -10,7 +10,9 @@ body,body > *{
     overflow:hidden;
 }
 
-
+.assets{
+    background: url(../img/superGarotaAssets.svg);
+}
 /*Animação do plano de fundo*/
 .bg {
     position: absolute;
@@ -27,7 +29,7 @@ body,body > *{
     height: 512px;
     background-image: url(../img/bg.jpg);
     background-size: 100%;
-    animation: moveBg 3s infinite linear;
+    animation: moveBg 30ss infinite linear;
 }
 
 .bg:before {
@@ -46,66 +48,108 @@ body,body > *{
     height: 138px;
     overflow: hidden;
     z-index: 1;
+    background-image: url(../img/superGarotaAssets.svg);
+    background-repeat: no-repeat;
 }
 
-/*Animação Super Garota voando */
-.playerVoando:before, .playerVoando:after {
-    content: "";
-    position: absolute;
-    width: 189px;
-    height: 138px;
-    background-image: url(../img/superGarotaVoando/0.png);
-    background-position: center;
-    background-size: 100%;
-    animation: movePlayerVoando 0.6s infinite ease;
-}
-@keyframes movePlayerVoando {
-    0%  {background-image: url(../img/superGarotaVoando/0.png);background-position: center;}
-    20% {background-image: url(../img/superGarotaVoando/1.png);background-position: center;}
-    40% {background-image: url(../img/superGarotaVoando/2.png);background-position: center;}
-    60% {background-image: url(../img/superGarotaVoando/3.png);background-position: center;}
-    80% {background-image: url(../img/superGarotaVoando/4.png);background-position: center;}
-    100% {background-image: url(../img/superGarotaVoando/5.png);background-position: center;}     
-}
-/*Animação Super Gorota atirando*/
-.playerAtirando:before, .playerAtirando:after {
-    content: "";
-    position: absolute;
-    width: 189px;
-    height: 138px;
-    background-image: url(../img/superGarotaAtirando/0.png);
-    background-position: center;
-    background-size: 100%;
-    animation: movePlayerAtirando 0.4s infinite ease;
-    margin-left: 13px;
-    margin-top: -2px;
-}
-@keyframes movePlayerAtirando {
-    0%  {background-image: url(../img/superGarotaAtirando/0.png);background-position: center;}
-    33% {background-image: url(../img/superGarotaAtirando/1.png);background-position: center;}
-    66% {background-image: url(../img/superGarotaAtirando/2.png);background-position: center;}
-    100% {background-image: url(../img/superGarotaAtirando/3.png);background-position: center;}    
+.player.voando{
+    -webkit-animation: voando 1s steps(6) infinite;
+       -moz-animation: voando 1s steps(6) infinite;
+        -ms-animation: voando 1s steps(6) infinite;
+         -o-animation: voando 1s steps(6) infinite;
+            animation: voando 1s steps(6) infinite;
 }
 
-/*Animação Super Gorota morrendo*/
-.playerMorrendo:before, .playerMorrendo:after {
-    content: "";
-    position: absolute;
-    width: 189px;
-    height: 138px;
-    background-image: url(../img/superGarotaMorrendo/0.png);
-    background-position: center;
-    background-size: 100%;
-    animation: movePlayerMorrendo 0.4s infinite ease;
+@-webkit-keyframes voando {
+   from { background-position: 0px; }
+     to { background-position: -1134px; }
 }
-@keyframes movePlayerMorrendo {
-    0%  {background-image: url(../img/superGarotaMorrendo/0.png);background-position: center;}
-    16% {background-image: url(../img/superGarotaMorrendo/1.png);background-position: center;}
-    32% {background-image: url(../img/superGarotaMorrendo/2.png);background-position: center;}
-    48% {background-image: url(../img/superGarotaMorrendo/3.png);background-position: center;}    
-    64% {background-image: url(../img/superGarotaMorrendo/4.png);background-position: center;}    
-    80% {background-image: url(../img/superGarotaMorrendo/5.png);background-position: center;}    
-    100% {background-image: url(../img/superGarotaMorrendo/6.png);background-position: center;}    
+
+@-moz-keyframes voando {
+   from { background-position: 0px; }
+     to { background-position: -1134px; }
+}
+
+@-ms-keyframes voando {
+   from { background-position: 0px; }
+     to { background-position: -1134px; }
+}
+
+@-o-keyframes voando {
+   from { background-position: 0px; }
+     to { background-position: -1134px; }
+}
+
+@keyframes voando {
+   from { background-position: 0px; }
+     to { background-position: -1134px; }
+}
+
+
+.player.atirando{
+    -webkit-animation: atirando 0.4s steps(4) infinite;
+       -moz-animation: atirando 0.4s steps(4) infinite;
+        -ms-animation: atirando 0.4s steps(4) infinite;
+         -o-animation: atirando 0.4s steps(4) infinite;
+            animation: atirando 0.4s steps(4) infinite;
+}
+
+@-webkit-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-moz-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-ms-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-o-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+.player.morrendo{
+    -webkit-animation: morrendo 0.7s steps(7) infinite;
+       -moz-animation: morrendo 0.7s steps(7) infinite;
+        -ms-animation: morrendo 0.7s steps(7) infinite;
+         -o-animation: morrendo 0.7s steps(7) infinite;
+            animation: morrendo 0.7s steps(7) infinite;
+}
+
+@-webkit-keyframes morrendo {
+   from { background-position: -1890px; }
+     to { background-position: -3213px; }
+}
+
+@-moz-keyframes morrendo {
+   from { background-position: -1890px; }
+     to { background-position: -3213px; }
+}
+
+@-ms-keyframes morrendo {
+   from { background-position: -1890px; }
+     to { background-position: -3213px; }
+}
+
+@-o-keyframes morrendo {
+   from { background-position: -1890px; }
+     to { background-position: -3213px; }
+}
+
+@keyframes morrendo {
+   from { background-position: -1890px; }
+     to { background-position: -3213px; }
 }
 
 /*Tiro*/
@@ -130,18 +174,59 @@ Moedas
     left: 1300px;
 }
 .moeda{
-    width: 30px;
+    width: 38px;
     height: 30px;
-    background-image: url(../img/moeda/0.png);
-    margin-left: 5px;
-    margin-right: 5px;
+    background-image: url(../img/moeda.png);
     animation: animaMoeda 0.6s infinite ease;
-    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 1300px;
+    -webkit-animation: moeda 0.5s steps(5) infinite;
+       -moz-animation: moeda 0.5s steps(5) infinite;
+        -ms-animation: moeda 0.5s steps(5) infinite;
+         -o-animation: moeda 0.5s steps(5) infinite;
+            animation: moeda 0.5s steps(5) infinite;
 }
 
-@keyframes animaMoeda {
-    0%  {background-image: url(../img/moeda/0.png);background-position: center;}
-    33% {background-image: url(../img/moeda/1.png);background-position: center;}
-    66% {background-image: url(../img/moeda/2.png);background-position: center;}
-    100% {background-image: url(../img/moeda/3.png);background-position: center;}    
+@-webkit-keyframes moeda {
+   from { background-position: 0px; }
+     to { background-position: -190px; }
+}
+
+@-moz-keyframes moeda {
+   from { background-position: 0px; }
+     to { background-position: -190px; }
+}
+
+@-ms-keyframes moeda {
+   from { background-position: 0px; }
+     to { background-position: -190px; }
+}
+
+@-o-keyframes moeda {
+   from { background-position: 0px; }
+     to { background-position: -190px; }
+}
+
+@keyframes moeda {
+   from { background-position: 0px; }
+     to { background-position: -190px; }
+}
+
+.vidas{
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top:10px;
+}
+
+.qtdMoedas{
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top:25px;
 }
