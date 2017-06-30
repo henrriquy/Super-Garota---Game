@@ -1,13 +1,25 @@
-body,body > *{
+body > *{
     padding: 0;
     margin: 0;
     overflow: hidden;
+    
+    
+}
+body{
+    background-color: rgb(0,168, 255);
+    background-image: url(../img/bgBody.jpg);
+    background-repeat: no-repeat;
 }
 .cena{
     width:1024px;
     height: 512px;
     border: 0px solid #000;
     overflow:hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -512px;
+    top:100px;
+    border: 3px solid #fff;
 }
 
 .assets{
@@ -29,7 +41,7 @@ body,body > *{
     height: 512px;
     background-image: url(../img/bg.jpg);
     background-size: 100%;
-    animation: moveBg 30ss infinite linear;
+    animation: moveBg 30s infinite linear;
 }
 
 .bg:before {
@@ -86,6 +98,38 @@ body,body > *{
 }
 
 
+.player.atirando{
+    -webkit-animation: atirando 0.4s steps(4) infinite;
+       -moz-animation: atirando 0.4s steps(4) infinite;
+        -ms-animation: atirando 0.4s steps(4) infinite;
+         -o-animation: atirando 0.4s steps(4) infinite;
+            animation: atirando 0.4s steps(4) infinite;
+}
+
+@-webkit-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-moz-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-ms-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@-o-keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
+
+@keyframes atirando {
+   from { background-position: -1134px; }
+     to { background-position: -1890px; }
+}
 .player.atingido{
     animation: playerAtingido;
     animation-duration: 1s;
@@ -156,13 +200,12 @@ body,body > *{
 }
 
 .player.morto{
-    -webkit-animation: morrendo 0.7s steps(7) infinite;
-       -moz-animation: morrendo 0.7s steps(7) infinite;
-        -ms-animation: morrendo 0.7s steps(7) infinite;
-         -o-animation: morrendo 0.7s steps(7) infinite;
-            animation: morrendo 0.7s steps(7) infinite;
+    -webkit-animation: morrendo 1s steps(7) infinite;
+       -moz-animation: morrendo 1s steps(7) infinite;
+        -ms-animation: morrendo 1s steps(7) infinite;
+         -o-animation: morrendo 1s steps(7) infinite;
+            animation: morrendo 1s steps(7) infinite;
 }
-
 @-webkit-keyframes morrendo {
    from { background-position: -1890px; }
      to { background-position: -3213px; }
@@ -190,7 +233,7 @@ body,body > *{
 
 /*Tiro*/
 .tiro{
-    background-image: url(../img/superGarotaAtirando/tiro.png);
+    background-image: url(../img/tiro.png);
     background-position: center;
     width: 50px;
     height: 20px;
@@ -331,24 +374,33 @@ Moedas
      to { background-position: -2170px; }
 }
 
-
+@font-face {
+    font-family: fonte;
+    src: url(ARDESTINE.ttf);
+}
 
 
 .font{
-     font-family: AR DESTINE;
-    text-transform: bold;
+     font-family: fonte;
     color: #fff; 
     font-size: 22px;
 }
 .vidas{
-    width: 500px;
+    width: 50px;
     height: 30px;
     position: absolute;
     z-index: 1;
     left: 10px;
     top:10px;
 }
-
+.nivel{
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top:60px;
+}
 .qtdMoedas{
     width: 50px;
     height: 30px;
@@ -363,4 +415,36 @@ Moedas
     padding-left: 25px;
     margin-top: 10px;
     margin-left: -5px;
+}
+
+.janela{
+    padding: 20px;
+      width:800px;
+    height: 310px;
+    overflow:hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top:150px;
+    border: 10px solid rgb(0,168, 255);
+    background-color: #fff;
+    color: #f53ba4;
+    z-index: 2;
+}
+.final{
+    display: none;
+}
+.janela p{
+    padding: 0;
+    margin: 5px;
+}
+
+button{
+    width: 100%;
+    height: 60px;
+    background-color: #f53ba4;
+    margin-top: 15px; 
+    border: 5px solid rgb(0,168, 255);
+    border-radius: 10px;
+    cursor:pointer;
 }

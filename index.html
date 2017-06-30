@@ -15,7 +15,7 @@
     <audio id="somMoeda">
         <source src="content/audios/moeda.mp3" type="audio/mpeg" />
     </audio>
-    <audio volume=0.0 autoplay loop id="musica">
+    <audio loop id="musica">
         <source src="content/audios/missionImpossivel.mp3" type="audio/mpeg" />
     </audio>
     <audio id="somMorteObstaculo">
@@ -30,19 +30,41 @@
     <audio id="somMorteFinalJogador">
         <source src="content/audios/morteFinalJogador.wav" type="audio/mpeg" />
     </audio>
+    <audio id="somToast">
+        <source src="content/audios/toasty.mp3" type="audio/mpeg" />
+    </audio>
     <div class="cena">
         <div class="font vidas">3x</div>
         <div class="font qtdMoedas">0</div>
+        <div class="font nivel">Nivel 1</div>
+        <div class="toast"></div>
         <div class="bg"></div>
         <div id="player1" class="player voando">
         </div>
     </div>
 
+    <div class="font janela inicio ">
+        <h3>COMANDDOS</h3>
+        <p>W - CIMA</p>
+        <p>S - BAIXO</p>
+        <p>A - ESQUERDA</p>
+        <p>D - DIREITA</p>
+        <p>P - DISPARAR BOLA DE ENERGIA</p>
+        <button class="font btnIniciar">HORA DE SALVAR O MUNDO</button>
+    </div>
+    <div class="font janela final">
+        <h3>VOCÊ CHEGOU AO FINAL DA SUA JORANDA</h3>
+        <p>AGORA FAÇA UM PRINT DA TELA E ENVIE PARA TODOS OS SEUS AMIGOS SABEREM QUE VOCÊ AJUDOU MUITO EM UMA BATALHA ÉPICA
+            PARA SALVAR A TERRA DA INVASÃO ALIENIGENA</p>
+        <P class="finalNivel">
+        </p>
+        <button class="font btnFinal">CONTINUAR SALVANDO O MUNDO</button>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="game.js"></script>
     <script src="tiro.js"></script>
-    <script src="moeda.js"></script>
-    <!-- Teste para mostrar o git pro san!>
+    <script src="npc.js"></script>
 </body>
 
 </html>

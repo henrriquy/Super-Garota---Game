@@ -12,7 +12,7 @@ function tiro() {
         });
     $(".cena").append(elementTiro);
     
-    elementTiro.animate({ "left": "+=1300px" }, 3000, "linear", function () {
+    elementTiro.animate({ "left": "+=1024px" }, 1500, "linear", function () {
         elementTiro.remove();
     });
 }
